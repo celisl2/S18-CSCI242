@@ -11,7 +11,7 @@ class Square extends Rectangle {
     
     public function setLength($length) {
        //Check to make sure number etc....
-        $this->length = $length;
+        parent::setLength($length);
         $this->width = $length;
     }
 
