@@ -1,0 +1,10 @@
+{
+    "require" : {
+        "doctrine/orm" : "v2.5.14"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Besmer\\" : "src/Besmer"
+        }
+    }
+}

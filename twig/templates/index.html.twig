@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+{{ parent() }}
+ - Accounts Page
+{% endblock %}
+
+{% block body %}
+    <h1>Welcome!</h1>
+    <p>To the site!</p>
+
+    {% for customer in customers %}
+        <h2>{{ customer.name | reverse }}</h2>
+        <p>Accounts for {{ customer.name }} :</p>
+        <ul>
+            {% for account in customer.getAccounts() %}
+                <li>Balance: {{ account.balance }}</li>
+            {% endfor %}
+                <li>Total: {{ customer.getBalanceOfAllAccounts() }}</li>
+        </ul>
+    {% endfor %}
+
+{% endblock %}
